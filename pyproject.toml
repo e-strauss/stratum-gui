@@ -1,0 +1,21 @@
+[project]
+name = "stratum-gui-backend"
+version = "0.1.0"
+description = "Optimizer playground backend for the Stratum inspector"
+requires-python = ">=3.11"
+dependencies = [
+    "stratum-ai",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=9.0.3",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+# Local Stratum checkout, installed editable. Change this path if your
+# checkout lives elsewhere.
+stratum-ai = { path = "../stratum", editable = true }
